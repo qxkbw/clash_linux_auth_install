@@ -65,12 +65,14 @@ except Exception:
     while True:
         select = input("输入你的选择: ")
         if select == '1' or select == '2':
-            url = input("输入选项：")
+            
+            hint = {select:"输入url地址："}.get(1,"输入config.yaml文件路径：")
+            url = input(hint)
             if url:
                 Confi_Yaml = url
                 break
             else:
-                print("为空")
+                print("输入为空，在次输入！")
             
         else:
             print("输入不正确，退出程序")
@@ -123,7 +125,7 @@ if clash_download_select[:4] == "http" or clash_download_select == "1":
             data.write("clahs=1\n")
 
 else:#路径
-    
+    clash_download = clash_download_select
     if not os.path.isfile(os.path.join(os.getcwd(), clash_download.split("/")[-1])):
         if os.system("mv "+clash_download+" "+os.getcwd()) != 0:
             print("移动clash文件失败，请检查提示信息")
