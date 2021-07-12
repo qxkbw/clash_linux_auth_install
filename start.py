@@ -227,9 +227,9 @@ print("git代理配置成功！")
 os.system("""
     cat << EOF >> /etc/profile
 export proxy="http://192.168.1.2:7890"
-export http_proxy=$proxy
-export https_proxy=$proxy
-export ftp_proxy=$proxy
+export http_proxy="http://192.168.1.2:7890"
+export https_proxy="http://192.168.1.2:7890"
+export ftp_proxy="http://192.168.1.2:7890"
 export no_proxy="localhost, 127.0.0.1, ::1" 
 EOF
 """)
