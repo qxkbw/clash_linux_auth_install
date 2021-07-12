@@ -6,7 +6,7 @@ clash linux自动安装
 + 已测试`Python2.7.5`和`Python3.6.8`
 + 理论上3.x版本都支持
 # 下载
-+ 1：`git clone git@github.com:sz-name/clash_linux_auth_install.git`
++ 1：`git clone git@github.com:qxkbw/clash_linux_auth_install.git`
 + 2: 在github.com上直接下载zip包，并且解压后使用
 + 3: 单独下载`start.py`文件也可以使用
 # 启动脚本
