@@ -233,6 +233,6 @@ export ftp_proxy=$proxy
 export no_proxy="localhost, 127.0.0.1, ::1" 
 EOF
 """)
-os.system("sourece /etc/profile")
+os.system("source  /etc/profile")
 print("配置代理环境完成！")
 print("所有配置完成，退出！")
