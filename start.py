@@ -66,7 +66,7 @@ except Exception:
         select = input("输入你的选择: ")
         if select == '1' or select == '2':
             
-            hint = {select:"输入url地址："}.get(1,"输入config.yaml文件路径：")
+            hint = {select:"输入url地址："}.get("1", "输入config.yaml文件路径：")
             url = input(hint)
             if url:
                 Confi_Yaml = url
@@ -224,4 +224,15 @@ if os.system("echo 'ProxyCommand connect -S 127.0.0.1:7890 %h %p' > ~/.ssh/confi
     print("设置git代理失败，错误步骤3")
     sys.exit(0)
 print("git代理配置成功！")
+os.system("""
+    cat << EOF >> /etc/profile
+export proxy="http://192.168.1.2:7890"
+export http_proxy=$proxy
+export https_proxy=$proxy
+export ftp_proxy=$proxy
+export no_proxy="localhost, 127.0.0.1, ::1" 
+EOF
+""")
+os.system("sourece /etc/profile")
+print("配置代理环境完成！")
 print("所有配置完成，退出！")
