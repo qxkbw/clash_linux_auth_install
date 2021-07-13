@@ -4,6 +4,9 @@ import os
 import sys
 import threading
 from time import sleep
+print('mmdb手动下载地址：https://github.com/Dreamacro/maxmind-geoip/releases/latest/download/Country.mmdb')
+print("把下载后的mmdb文件移动到这个目录： ~/.config/clash/Country.mmdb")
+sleep(3)
 if sys.version_info.major == 3:
     input = input
 else:
