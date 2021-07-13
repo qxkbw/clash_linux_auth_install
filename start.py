@@ -12,7 +12,9 @@ os.system("systemctl stop systemd-resolved")
 os.system("systemctl disable systemd-resolved")#这里会导致53端口占用，所以直接默认关闭
 # 配置 -------------
 # clash下载地址 # 可指定clash包文件 绝对路径，我发现下载太慢了，所以添加自己下载clash包，指定文件名路径
-clash_download = "https://github.com/Dreamacro/clash/releases/download/v1.6.5/clash-linux-amd64-v1.6.5.gz"
+clas_version = "1.6.5"
+clash_download = "https://github.com/Dreamacro/clash/releases/download/"+clas_version+"/clash-linux-amd64-"+clas_version+".gz"
+print("当前版本：",clas_version)
 systemctl_status = True #True:创建，False：不创建。是否创建systemctl配置文件，并且从systemctl启动clash
 systemctl_user = "root" #启动systemctl的指定用户
 git_status = True #是否修改git的代理 True:修改，False:不修改
