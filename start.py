@@ -83,6 +83,7 @@ except Exception:
     with open("clash_linux_auto_install_config.conf", "w+") as data:
         data.write(clash_download_select+"\n"+Confi_Yaml+"\n")
 
+
 while True:
     #选择配置
     print("""
@@ -212,7 +213,7 @@ while True:
                 os.system("systemctl stop clash@"+systemctl_user)
                 sys.exit(0)
             count += 1
-            print("第"+count+"次等待")
+            print("第"+str(count)+"次等待")
 if not git_status:
     sys.exit(1)
 os.system("mkdir ~/.ssh")
