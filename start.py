@@ -11,8 +11,8 @@ if sys.version_info.major == 3:
     input = input
 else:
     input = eval('raw_input')
-os.system("systemctl stop systemd-resolved")
-os.system("systemctl disable systemd-resolved")#这里会导致53端口占用，所以直接默认关闭
+#os.system("systemctl stop systemd-resolved")
+#os.system("systemctl disable systemd-resolved")#这里会导致53端口占用，所以直接默认关闭
 # 配置 -------------
 # clash下载地址 # 可指定clash包文件 绝对路径，我发现下载太慢了，所以添加自己下载clash包，指定文件名路径
 clas_version = "1.6.5"
